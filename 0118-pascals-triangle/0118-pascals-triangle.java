@@ -6,11 +6,10 @@ class Solution {
             int val = 1;
             for(int j=0;j<=i;j++){
                 root.add(val);
-                val = val*(i-j)/(j+1);
+                val= val*(i-j)/(j+1);
             }
             list.add(root);
         }
         return list;
-        
     }
 }
