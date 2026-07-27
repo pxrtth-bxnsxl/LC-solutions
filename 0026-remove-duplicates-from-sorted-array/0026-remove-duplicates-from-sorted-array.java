@@ -4,8 +4,8 @@ class Solution {
         int j = i+1;
         while(j<nums.length){
             if(nums[i]!=nums[j]){
-                i++;
-                nums[i] = nums[j]; 
+                
+                nums[++i] = nums[j]; 
             }
             j++;
         }
