@@ -8,9 +8,6 @@ class Solution {
                 count++;
             }
         }
-        if(count>1){
-            return false;
-        }
-        return true;
+        return count<=1;
     }
 }
