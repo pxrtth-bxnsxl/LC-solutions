@@ -12,6 +12,6 @@ class Solution {
                 ed = mid-1;
             }
         }
-        return k+ed+1;
+        return k+st;
     }
 }
