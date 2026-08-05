@@ -10,11 +10,12 @@ class Solution {
                 map.put(nums[i],1);
             }
         }
-        for(var ele:map.keySet()){
-            if(map.get(ele)>(nums.length/3)){
-                list.add(ele);
-            }
+        // Iterates over both the key and the value simultaneously
+    for (Map.Entry<Integer, Integer> entry : map.entrySet  ()) {
+        if (entry.getValue() > nums.length / 3) {
+            list.add(entry.getKey());
         }
+    }
         return list;
 
     }
