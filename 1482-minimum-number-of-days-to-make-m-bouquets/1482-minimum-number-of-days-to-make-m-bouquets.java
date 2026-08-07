@@ -3,10 +3,11 @@ class Solution {
         if(bloomDay.length<(m*k)){
             return -1;
         }
-        int st = 1;
+        int st = 0;
         int ed = 0;
         for(int num:bloomDay){
             ed = Math.max(num,ed);
+            st = Math.min(num,st);
         }
         int minDays = -1;
         while(st<=ed){
