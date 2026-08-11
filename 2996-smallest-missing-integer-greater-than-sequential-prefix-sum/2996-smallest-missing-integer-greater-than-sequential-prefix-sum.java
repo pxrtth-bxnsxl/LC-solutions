@@ -2,7 +2,6 @@ class Solution {
    
     public int missingInteger(int[] nums) {
         int sum = nums[0];
-        int maxSum = 0;
         for(int i=1;i<nums.length;i++){
             if(nums[i]==nums[i-1]+1){
                 sum+=nums[i];
@@ -15,17 +14,14 @@ class Solution {
             //     sum = nums[0];
             // }
         }
-        maxSum = sum;
-        Arrays.sort(nums);
-        if(maxSum>nums[nums.length-1]){
-            return maxSum;
+        HashSet<Integer> set = new HashSet<>();
+        for(int p:nums){
+            set.add(p);
         }
-        int j = maxSum;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==j){
-                j++;
-            }
+        
+        while(set.contains(sum)){
+            sum++;
         }
-        return j;
+        return sum;
     }
 }
