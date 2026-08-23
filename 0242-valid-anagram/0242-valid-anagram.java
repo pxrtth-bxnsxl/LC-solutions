@@ -3,16 +3,14 @@ class Solution {
         if(s.length()!=t.length()){
             return false;
         }
-        char s1[] = new char[s.length()];
-        char s2[] = new char[t.length()];
+        int count[] = new int[26];
         for(int i=0;i<s.length();i++){
-            s1[i] = s.charAt(i);
-            s2[i] = t.charAt(i);
+            count[s.charAt(i)-'a']++;
+            count[t.charAt(i)-'a']--;
         }
-        Arrays.sort(s1);
-        Arrays.sort(s2);
-        for(int i=0;i<s1.length;i++){
-            if(s1[i]!=s2[i]){
+
+        for(int counts: count){
+            if(counts!=0){
                 return false;
             }
         }
