@@ -2,6 +2,7 @@ class Solution {
     public int rob(int[] nums) {
         int n = nums.length;
         int dp[] = new int[n];
+        Arrays.fill(dp,-1);
         dp[0] = nums[0];
         for(int i=1;i<n;i++){
             if(i==1){
