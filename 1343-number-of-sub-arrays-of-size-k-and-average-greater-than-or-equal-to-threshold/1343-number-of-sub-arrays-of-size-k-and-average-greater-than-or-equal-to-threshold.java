@@ -12,11 +12,11 @@ class Solution {
         }
         while(k<arr.length){
             sum +=arr[k]-arr[l];
-            if(sum>=targetSum){
-                count++;
-            }
             k++;
             l++;   
+             if(sum>=targetSum){
+                count++;
+            }
         }
         return count;
     }
